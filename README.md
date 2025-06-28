@@ -104,6 +104,7 @@ Here my cluster name is: **Microservice-Application** and region is **us-east-1*
 
 Here are some essential Kubernetes commands for managing your deployment:
 
+Lets Start with deploying MongoDB, postgreSQL and then RabbitMQ
 
 ### MongoDB
 
@@ -114,11 +115,19 @@ cd Helm_charts/MongoDB
 helm install mongo .
 ```
 
+![MongoDB](Req_Doc/mongo.png)
+
 Connect to the MongoDB instance using:
+
+The username and password are `charan` and `charan1234` respectively. You can change them in the Helm Charts `values.yaml` file. You can check the EC2 IP in the AWS Console under the EC2 dashboard.
+
+![MongoDB_Cred](Req_Doc/mongo_cred.png)
 
 ```
 mongosh mongodb://<username>:<pwd>@<nodeip>:30005/mp3s?authSource=admin
 ```
+
+![MongoDB_connection](Req_Doc/mongo_conn.png)
 
 ### PostgreSQL
 
