@@ -15,9 +15,8 @@ This document provides a step-by-step guide for deploying a Python-based microse
 
 ### Prerequisites
 
-On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/install/), [Python](https://www.python.org/downloads/), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [kubectl](https://kubernetes.io/docs/tasks/tools/) by following their official instructions.
+On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/install/), [Python](https://www.python.org/downloads/), [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), [kubectl](https://kubernetes.io/docs/tasks/tools/), and set up [PostgreSQL](https://www.postgresql.org/download/) and [MongoDB](https://www.mongodb.com/try/download/community) by following their official instructions.
 
-6. **Databases:** Set up PostgreSQL and MongoDB for your application.
 
 ### High Level Flow of Application Deployment
 
