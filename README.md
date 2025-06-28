@@ -28,7 +28,8 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 1. **Create eksCluster IAM Role**
    - Create a eks cluster Role with the below permissions.
 
-![EKS Cluster IAM Role](Req_Doc/eksClusterRole.png)
+![EKS Cluster IAM Role](Req_Doc/EKS_CLUSTER_ROLE.png)
+![EKS Cluster IAM Role](Req_Doc/EKS_CLUSTER_ROLE-2.png)
 
 - Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
 
@@ -38,7 +39,7 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
     - Simply attach the following policies to your role once you have created `AmazonEKS_CNI_Policy` , `AmazonEBSCSIDriverPolicy` , `AmazonEC2ContainerRegistryReadOnly`
      incase it is not attached by default.
 
-![EKS Node IAM Role](Req_Doc/eksNodeRole.png)
+![EKS Cluster IAM Role](Req_Doc/EKS_NODE_ROLE.png)
 
 
 - Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
