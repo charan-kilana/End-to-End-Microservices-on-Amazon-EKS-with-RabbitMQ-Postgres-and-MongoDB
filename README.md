@@ -24,18 +24,24 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 
 #### Cluster Creation
 
-1. **Log in to AWS Console:**
-   - Access the AWS Management Console with your AWS account credentials.
 
-2. **Create eksCluster IAM Role**
-   - Follow the steps mentioned in [this](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) documentation using root user
-   - After creating it will look like this:
+1. **Create eksCluster IAM Role**
+   - Create a eks cluster Role with the below permissions.
 
-   <p align="center">
-  <img src="./Project documentation/ekscluster_role.png" width="600" title="ekscluster_role" alt="ekscluster_role">
-  </p>
+![EKS Cluster IAM Role](Req_Doc/eksClusterRole.png)
 
-   - Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
+- Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
+
+2. **Create Node eksNodeRole IAM Role**
+    - Create a eks Node Role with the below permissions.
+    - Please note that you do NOT need to configure any VPC CNI policy mentioned after step 5.e under Creating the Amazon EKS node IAM role
+    - Simply attach the following policies to your role once you have created `AmazonEKS_CNI_Policy` , `AmazonEBSCSIDriverPolicy` , `AmazonEC2ContainerRegistryReadOnly`
+     incase it is not attached by default.
+
+![EKS Node IAM Role](Req_Doc/eksNodeRole.png)
+
+
+- Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
 
 3. **Create Node Role - AmazonEKSNodeRole**
    - Follow the steps mentioned in [this](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html#create-worker-node-role) documentation using root user
