@@ -58,11 +58,10 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 
 ![EKS Cluster Creation-1](Req_Doc/img1.png)
 
+![EKS Cluster Creation-2](Req_Doc/img2.png)
 
-![EKS Cluster Creation-1](Req_Doc/img2.png)
+![EKS Cluster Creation-3](Req_Doc/img3.png)
 
-
-![EKS Cluster Creation-1](Req_Doc/img3.png)
 
 5. **Cluster Creation:**
    - Wait for the cluster to provision, which may take several minutes.
