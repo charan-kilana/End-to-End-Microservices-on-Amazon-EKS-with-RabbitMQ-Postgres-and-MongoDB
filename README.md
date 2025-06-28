@@ -161,10 +161,18 @@ Deploy RabbitMQ by running:
 ```
 helm install rabbitmq .
 ```
+![Rabbit_MQ_Helm_Installation](Req_Doc/rabbitmq_helm.png)
 
 Ensure you have created two queues in RabbitMQ named `mp3` and `video`. To create queues, visit `<nodeIp>:30004>` and use default username `guest` and password `guest`
+![Rabbit_MQ_queues](Req_Doc/queues.png)
+
 
 **NOTE:** Ensure that all the necessary ports are open in the node security group.
+
+**Kubernetes mongo, postgres and rabbitmq resources**
+![Rabbit_MQ_Helm_Installation](Req_Doc/all_res.png)
+
+
 
 ### Apply the manifest file for each microservice:
 
