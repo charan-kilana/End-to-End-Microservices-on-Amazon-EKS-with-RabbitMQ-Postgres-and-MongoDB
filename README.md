@@ -237,34 +237,36 @@ Run the application through the following API calls:
 
 # API Definition
 
+Before logging in and uploading, navigate to the `assets` folder where you have the `.mp4` file.
+
 - **Login Endpoint**
-  ```http request
-  POST http://nodeIP:30002/login
-  ```
+Here, you should use the credentials that you inserted into the Postgres database. Once you log in, if everything is correct, you'll receive a JWT token.
+![Login Credentials](Req_Doc/my_postgres_login.png)
 
   ```console
   curl -X POST http://nodeIP:30002/login -u <email>:<password>
-  ``` 
-  Expected output: success!
+  ```
+![JWT_Token](Req_Doc/JWT.png)
 
 - **Upload Endpoint**
-  ```http request
-  POST http://nodeIP:30002/upload
-  ```
+The received JWT token and node IP should be entered in the command.
+
+**NOTE:** Make sure you're in the `assets` folder where `video.mp4` is present.
 
   ```console
-   curl -X POST -F 'file=@./video.mp4' -H 'Authorization: Bearer <JWT Token>' http://nodeIP:30002/upload
+   curl -X POST -F "file=@./video.mp" -H "Authorization: Bearer <JWT Token>" http://nodeIP:30002/upload
   ``` 
-  
-  Check if you received the ID on your email.
+![uploaded](Req_Doc/sucess_upload.png)
+
+Check if you received the ID in your email.
+![Gmail_Confirmation](Req_Doc/gmail_confirmation.png)
 
 - **Download Endpoint**
-  ```http request
-  GET http://nodeIP:30002/download?fid=<Generated file identifier>
-  ```
+
   ```console
-   curl --output video.mp3 -X GET -H 'Authorization: Bearer <JWT Token>' "http://nodeIP:30002/download?fid=<Generated fid>"
+   curl --output video.mp3 -X GET -H "Authorization: Bearer <JWT Token>" "http://<nodeIP>:30002/download?fid=<Generated fid>"
   ``` 
+![Download](Req_Doc/final_download.png)
 
 ## Destroying the Infrastructure
 
