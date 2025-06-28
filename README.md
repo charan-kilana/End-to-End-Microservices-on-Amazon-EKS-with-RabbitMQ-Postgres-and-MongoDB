@@ -56,13 +56,13 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
    - Choose the `eksCluster` IAM role that was created above
    - Review and create the cluster.
 
-![EKS Cluster Creation-1(Req_Doc/img1.png)
+![EKS Cluster Creation-1](Req_Doc/img1.png)
 
 
-![EKS Cluster Creation-1(Req_Doc/img2.png)
+![EKS Cluster Creation-1](Req_Doc/img2.png)
 
 
-![EKS Cluster Creation-1(Req_Doc/img3.png)
+![EKS Cluster Creation-1](Req_Doc/img3.png)
 
 5. **Cluster Creation:**
    - Wait for the cluster to provision, which may take several minutes.
