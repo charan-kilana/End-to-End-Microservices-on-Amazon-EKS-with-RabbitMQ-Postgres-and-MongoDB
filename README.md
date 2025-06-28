@@ -68,39 +68,37 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 
 6. **Cluster Ready:**
    - Once the cluster status shows as "Active," you can now create node groups.
-![EKS Cluster Creation-3](Req_Doc/cluster_ready.png)
+![EKS Cluster Creation](Req_Doc/cluster_ready.png)
 
-#### Node Group Creation
 
-1. In the "Compute" section, click on "Add node group."
+#### Adding Inbound Rules in Security Group of Nodes
 
-2. Choose the AMI (default), instance type (e.g., t3.medium), and the number of nodes (attach a screenshot here).
+Once the EKS cluster is up, an EC2 instance will be created. Allow the necessary ports in the security group’s inbound rules to ensure proper communication between services.
 
-3. Click "Create node group."
+**NOTE:** Ensure that all the required ports are open in the node security group.
 
-#### Adding inbound rules in Security Group of Nodes
+![Security Group](Req_Doc/SG_EC2.png)
 
-**NOTE:** Ensure that all the necessary ports are open in the node security group.
 
-<p align="center">
-  <img src="./Project documentation/inbound_rules_sg.png" width="600" title="Inbound_rules_sg" alt="Inbound_rules_sg">
-  </p>
-
-#### Enable EBS CSI Addon
-1. enable addon `ebs csi` this is for enabling pvcs once cluster is created
-
-<p align="center">
-  <img src="./Project documentation/ebs_addon.png" width="600" title="ebs_addon" alt="ebs_addon">
-  </p>
 
 #### Deploying your application on EKS Cluster
 
-1. Clone the code from this repository.
+1. Clone the code from this repository:
+   ```
+   https://github.com/charan-kilana/End-to-End-Microservices-on-Amazon-EKS-with-RabbitMQ-Postgres-and-MongoDB.git
+   ```
+2. Configure AWS CLI::
+   ```
+   aws configure
+   ```
 
 2. Set the cluster context:
    ```
    aws eks update-kubeconfig --name <cluster_name> --region <aws_region>
    ```
+Here my cluster name is: **Microservice-Application** and region is **us-east-1**.
+
+![EKS_CLI(Req_Doc/eks_login.png)
 
 ### Commands
 
