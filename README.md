@@ -138,11 +138,21 @@ cd ..
 cd Postgres
 helm install postgres .
 ```
+![Postgres_Helm_Installation](Req_Doc/postgres-1.png)
 
-Connect to the Postgres database and copy all the queries from the "init.sql" file.
+The username and password are `nasi` and `cnd2023` respectively. You can change them in the Helm Charts `values.yaml` file. You can check the EC2 IP in the AWS Console under the EC2 dashboard.
+![Postgres_Credentials](Req_Doc/postgres-cred.png)
+
 ```
 psql 'postgres://<username>:<pwd>@<nodeip>:30003/authdb'
 ```
+![Postgres_connection](Req_Doc/postgres_conn.png)
+
+Connect to the Postgres database and copy all the queries from the "init.sql" file.
+![Postgres_Credentials](Req_Doc/postgres_sq_commands.png)
+
+Exceute commands inside the **authdb**
+![Postgres_sql_commands](Req_Doc/sql_commands.png)
 
 ### RabbitMQ
 
