@@ -265,7 +265,9 @@ Check if you received the ID in your email.
 
   ```console
    curl --output video.mp3 -X GET -H "Authorization: Bearer <JWT Token>" "http://<nodeIP>:30002/download?fid=<Generated fid>"
-  ``` 
+  ```
+
+**So finally your video got converted to audio**
 ![Download](Req_Doc/final_download.png)
 
 ## Destroying the Infrastructure
