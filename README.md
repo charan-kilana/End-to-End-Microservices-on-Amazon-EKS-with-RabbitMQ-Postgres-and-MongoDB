@@ -68,6 +68,7 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 
 6. **Cluster Ready:**
    - Once the cluster status shows as "Active," you can now create node groups.
+![EKS Cluster Creation-3](Req_Doc/cluster_ready.png)
 
 #### Node Group Creation
 
