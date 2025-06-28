@@ -98,7 +98,7 @@ Once the EKS cluster is up, an EC2 instance will be created. Allow the necessary
    ```
 Here my cluster name is: **Microservice-Application** and region is **us-east-1**.
 
-![EKS_CLI(Req_Doc/eks_login.png)
+![EKS_CLI](Req_Doc/eks_login.png)
 
 ### Commands
 
