@@ -119,7 +119,7 @@ helm install mongo .
 
 Connect to the MongoDB instance using:
 
-The username and password are `charan` and `charan1234` respectively. You can change them in the Helm Charts `values.yaml` file. You can check the EC2 IP in the AWS Console under the EC2 dashboard.
+The username and password are `nasi` and `nasi1234` respectively. You can change them in the Helm Charts `values.yaml` file. You can check the EC2 IP in the AWS Console under the EC2 dashboard.
 
 ![MongoDB_Cred](Req_Doc/mongo_cred.png)
 
