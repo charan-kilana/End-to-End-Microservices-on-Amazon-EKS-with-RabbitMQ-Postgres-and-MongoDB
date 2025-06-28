@@ -20,31 +20,7 @@ On Windows, install prerequisites using [Helm](https://helm.sh/docs/intro/instal
 ![View Requirements Document](Req_Doc/versions.png)
 
 
-### High Level Flow of Application Deployment
-
-Follow these steps to deploy your microservice application:
-
-1. **MongoDB and PostgreSQL Setup:** Create databases and enable automatic connections to them.
-
-2. **RabbitMQ Deployment:** Deploy RabbitMQ for message queuing, which is required for the `converter-module`.
-
-3. **Create Queues in RabbitMQ:** Before deploying the `converter-module`, create two queues in RabbitMQ: `mp3` and `video`.
-
-4. **Deploy Microservices:**
-   - **auth-server:** Navigate to the `auth-server` manifest folder and apply the configuration.
-   - **gateway-server:** Deploy the `gateway-server`.
-   - **converter-module:** Deploy the `converter-module`. Make sure to provide your email and password in `converter/manifest/secret.yaml`.
-   - **notification-server:** Configure email for notifications and two-factor authentication (2FA).
-
-5. **Application Validation:** Verify the status of all components by running:
-   ```bash
-   kubectl get all
-   ```
-
-6. **Destroying the Infrastructure** 
-
-
-### Low Level Steps
+### Setup:
 
 #### Cluster Creation
 
