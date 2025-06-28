@@ -170,7 +170,7 @@ Ensure you have created two queues in RabbitMQ named `mp3` and `video`. To creat
 **NOTE:** Ensure that all the necessary ports are open in the node security group.
 
 **Kubernetes mongo, postgres and rabbitmq resources**
-![Rabbit_MQ_Helm_Installation](Req_Doc/all_res.png)
+![mongo_postgres_rabbitmq](Req_Doc/all_res.png)
 
 
 
@@ -199,6 +199,7 @@ Ensure you have created two queues in RabbitMQ named `mp3` and `video`. To creat
   cd notification-service/manifest
   kubectl apply -f .
   ```
+![All_Resources_Created](Req_Doc/all_res_created.png)
 
 ### Application Validation
 
@@ -207,6 +208,8 @@ After deploying the microservices, verify the status of all components by runnin
 ```
 kubectl get all
 ```
+![All_Resources_validation](Req_Doc/validation.png)
+
 
 ### Notification Configuration
 
