@@ -8,6 +8,7 @@ Converting mp4 videos to mp3 in a microservices architecture.
   </p>
 
 ## Deploying a Python-based Microservice Application on AWS EKS
+![Gmail_Confirmation](Req_Doc/gmail_confirmation.png)
 
 ### Introduction
 
